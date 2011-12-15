@@ -1,0 +1,7 @@
+/************************************************************************************/
+/*  Time.c has been modified o improve the performance of the MINIX device driver.  */
+/*  Found that an unnecessary counter was introduced in gettime function. Due to    */
+/*  this osec i.e. time in seconds even if that reached zero, the counter kept the  */
+/*  loop to execute. Changing this to check whther the time has ever reached zero,  */
+/*  helped show the right fetch time.                                               */
+/************************************************************************************/
